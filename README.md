@@ -2,6 +2,8 @@
 
 Puppet module for SLURM client and server
 
+Copied from https://github.com/fasrc/puppet-slurm
+
 ## Usage
 
 To use this module simply include `slurm` class for the hosts on which you wish to install slurm.  By default the host will be considered a compute node. There are a series of control parameters which will override the default behavior, those are defined below.  In order to keep hiera from getting bloated it is recommended that you use puppet groups to define the cluster you wish to set up, and then simply include the group along with any host specific settings you have.
