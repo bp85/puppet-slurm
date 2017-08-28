@@ -1,0 +1,19 @@
+#
+# File managed by Puppet!
+#
+# See the slurm.conf man page for more information.
+#
+
+<% slurm_conf = scope.lookupvar('slurm::slurm_conf') -%>
+<% slurm_conf.keys.sort.each do |key| -%>
+<% value = slurm_conf[key] -%>
+<% next if value == :undef or ! value or value == 'UNSET' -%>
+<% if value.is_a?(Array) -%>
+<%= key %>=<%= value.join(',') %>
+<% else -%>
+<%= key %>=<%= value %>
+<% end -%>
+<% end -%>
+
+Include <%= scope.lookupvar('slurm::node_conf_path') %>
+Include <%= scope.lookupvar('slurm::partition_conf_path') %>

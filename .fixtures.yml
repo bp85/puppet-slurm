@@ -1,0 +1,29 @@
+fixtures:
+  repositories:
+    stdlib:
+      repo: git://github.com/puppetlabs/puppetlabs-stdlib.git
+      ref: 4.1.0
+    datacat: git://github.com/richardc/puppet-datacat.git
+    firewall:
+      repo: git://github.com/puppetlabs/puppetlabs-firewall.git
+      ref: 1.0.2
+    mysql:
+      repo: git://github.com/puppetlabs/puppetlabs-mysql.git
+      ref: 2.3.1
+    augeasproviders_core:
+      repo: git://github.com/hercules-team/augeasproviders_core.git
+    augeasproviders_sysctl:
+      repo: git://github.com/hercules-team/augeasproviders_sysctl.git
+    logrotate:
+      repo: git://github.com/rodjek/puppet-logrotate.git
+    epel:
+      repo: git://github.com/stahnma/puppet-module-epel.git
+    limits:
+      repo: git://github.com/saz/puppet-limits.git
+    munge:
+      repo: git://github.com/treydock/puppet-munge.git
+    blcr:
+      repo: git://github.com/treydock/puppet-module-blcr.git
+  symlinks:
+    slurm: "#{source_dir}"
+    site_slurm: "#{File.join(source_dir, 'tests', 'site_slurm')}"

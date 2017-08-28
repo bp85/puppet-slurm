@@ -1,0 +1,37 @@
+{
+  "name": "treydock-slurm",
+  "version": "0.0.2",
+  "author": "fasrc",
+  "summary": "SLURM Puppet module",
+  "license": "Apache-2.0",
+  "source": "git://github.com/fasrc/puppet-slurm.git",
+  "issues_url": "https://github.com/fasrc/puppet-slurm/issues",
+  "project_page": "https://github.com/fasrc/puppet-slurm",
+  "tags": [ "slurm", "hpc" ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    }
+  ],
+  "dependencies": [
+    { "name": "puppetlabs/stdlib", "version_requirement": ">=3.2.0 <5.0.0" },
+    { "name": "puppetlabs/firewall", "version_requirement": ">=1.0.0 <2.0.0" },
+    { "name": "puppetlabs/concat", "version_requirement": ">=1.0.0 <2.0.0" },
+    { "name": "puppetlabs/mysql", "version_requirement": ">=2.3.0 <4.0.0" },
+    { "name": "stahnma/epel", "version_requirement": ">= 0.0.6 <2.0.0" },
+    { "name": "duritong/sysctl", "version_requirement": ">= 0.0.11" },
+    { "name": "richardc/datacat", "version_requirement": ">=0.6.x" },
+    { "name": "treydock/munge", "version_requirement": "0.x" },
+    { "name": "camptocamp/systemd", "version_requirement": ">=0.2.2" },
+    { "name": "yo61/logrotate", "version_requirement": ">=1.4.0" }
+  ]
+}
